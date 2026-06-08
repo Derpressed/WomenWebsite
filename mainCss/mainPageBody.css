@@ -1,0 +1,35 @@
+#main-page-container {
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 1;
+    background-color: rgb(250, 232, 237);
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+}
+
+#main-page-women {
+    font-size: 100px;
+}
+
+#main-page-meaning {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    font-size: 30px;
+    white-space: nowrap;
+
+    text-align: center;
+}
+
+#main-page-meaning span {
+    font-size: 20px;
+}
