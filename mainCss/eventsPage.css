@@ -1,0 +1,10 @@
+#events-page-container {
+
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 1;
+
+    background-color: rgb(233, 214, 215);
+}
