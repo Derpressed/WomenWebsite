@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: "Sora";
+
+    color: rgb(100, 33, 149);
+    font-weight: 300;
+
+    user-select: none;
+    padding: 0px;
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Sora";
+    src: url("../font/Sora_Complete/Fonts/WEB/fonts/Sora-Variable.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Sora Italic";
+    src: url("../font/Sora_Complete/Fonts/WEB/fonts/Sora-VariableItalic.woff2") format("woff2");
+}

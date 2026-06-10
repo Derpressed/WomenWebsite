@@ -1,12 +1,220 @@
-
-
 #about-page-container {
+    display: flex;
+    flex-direction: column;
 
+    position: relative;
 
-    width: 100vw;
-    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
 
     z-index: 1;
 
     background-color: rgb(233, 214, 215);
+
+    overflow-x: hidden;
+    padding: clamp(130px, 14vh, 170px) 24px clamp(40px, 7vh, 64px);
+}
+
+#about-page-container .main-container {
+    width: min(100%, 1700px);
+    min-height: clamp(420px, 60vh, 600px);
+
+    padding-top: clamp(64px, 8vh, 100px);
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(24px, 6vw, 100px);
+}
+
+#about-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    width: min(100%, 1200px);
+    min-height: clamp(110px, 16vh, 140px);
+
+    top: 0px;
+
+    gap: clamp(16px, 4vw, 50px);
+}
+
+#about-container .text-logo {
+    position: absolute;
+    
+    font-size: clamp(48px, 11vw, 150px);
+    font-weight: 30;
+
+    letter-spacing: clamp(8px, 3vw, 50px);
+    text-indent: clamp(8px, 3vw, 50px);
+    opacity: 0.03;
+
+    padding-top: clamp(20px, 5vh, 80px);
+    white-space: nowrap;
+}
+
+#about-container > .text-logo span {
+    display: inline-block;
+    animation: bounce 3s infinite alternate ease-in-out;
+}
+
+#about-container > .text-logo span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+#about-container > .text-logo span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+#about-container > .text-logo span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+#about-container > .text-logo span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+#about-container > .text-logo span:nth-child(5) {
+    animation-delay: 2s;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-25px);
+    }
+}
+
+#about-container > .text {
+    position: absolute;
+
+
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#about-container > .description {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 4vw, 60px);
+
+    padding-top: clamp(72px, 10vh, 100px);
+    font-weight: 500;
+
+    width: 100%;
+    text-align: center;
+    font-size: clamp(16px, 2.4vw, 20px);
+}
+
+#about-container > .description span {
+    animation: colorChange 2s infinite alternate ease-in-out;
+    font-family: "Sora Italic";
+}
+
+@keyframes colorChange {
+    from {
+        color: rgb(100, 33, 149);
+    } to {
+        color: rgb(255, 0, 157);
+    }
+}
+
+#about-body-text {
+    width: min(100%, 1200px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: clamp(18px, 3vw, 30px);
+}
+
+@media (max-width: 730px) {
+    #about-page-container {
+        justify-content: flex-start;
+        padding: calc(112px + clamp(12px, 4vh, 28px)) 16px 40px;
+    }
+
+    #about-page-container .main-container {
+        min-height: auto;
+        padding-top: clamp(80px, 18vh, 120px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about-container {
+        min-height: clamp(96px, 22vh, 132px);
+    }
+
+    #about-container .text-logo {
+        font-size: clamp(44px, 17vw, 72px);
+        letter-spacing: clamp(6px, 2.4vw, 12px);
+        text-indent: clamp(6px, 2.4vw, 12px);
+        padding-top: 0px;
+    }
+
+    #about-container > .description {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding-top: clamp(58px, 14vh, 82px);
+    }
+}
+
+@media (max-width: 730px) {
+    #about-page-container .main-container {
+        padding-top: 0px;
+    }
+
+    #about-container {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: auto;
+        gap: 14px;
+        text-align: center;
+    }
+
+    #about-container .text-logo {
+        top: 0px;
+        left: 50%;
+        width: max-content;
+        padding-top: 0px;
+        transform: translateX(-50%);
+    }
+
+    #about-container > .text {
+        position: relative;
+        order: 1;
+        z-index: 2;
+    }
+
+    #about-container > .description {
+        position: relative;
+        order: 2;
+        padding-top: 0px;
+        z-index: 2;
+    }
 }

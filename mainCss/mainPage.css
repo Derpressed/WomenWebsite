@@ -3,8 +3,8 @@
     flex-direction: column;
     top: 0px;
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
 
     z-index: 1;
     background-color: rgb(250, 232, 237);
@@ -12,11 +12,27 @@
     justify-content: center;
     align-items: center;
 
-    gap: 50px;
+    gap: 20px;
+    padding: 160px 24px 64px;
 }
 
 #main-page-women {
-    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    max-width: 100%;
+
+    font-size: clamp(64px, 16vw, 200px);
+    font-family: "Sora";
+    font-weight: 100;
+
+    letter-spacing: clamp(4px, 1.6vw, 20px);
+    text-indent: clamp(4px, 1.6vw, 20px);
+    color: rgb(255, 0, 157);
+
+    padding-top: 0px;
+    text-align: center;
 }
 
 #main-page-meaning {
@@ -24,12 +40,81 @@
     flex-direction: column;
     gap: 20px;
     
-    font-size: 30px;
-    white-space: nowrap;
+    max-width: min(100%, 900px);
+
+    font-size: clamp(16px, 3vw, 30px);
+    font-weight: 250;
+    letter-spacing: clamp(0px, 0.3vw, 2px);
 
     text-align: center;
+    text-wrap: balance;
+
+    color: rgb(100, 33, 149);
 }
 
-#main-page-meaning span {
+#main-page-bottom {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    width: min(100%, 820px);
+
+}
+
+#main-page-bottom .button {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding-top: clamp(24px, 5vw, 50px);
+}
+
+#main-page-bottom .button button {
+    height: 50px;
+    width: min(300px, 80vw);
+
+    border-radius: 20px;
+    border-color: rgb(255, 0, 157);
+    border-width: 4px;
+    
+    background-color: rgb(255, 0, 157);
+    transition: all 0.3s ease;
+
+    font-family: "Sora Italic";
+
+    color: rgb(100, 33, 149);
+    font-weight: 300;
     font-size: 20px;
 }
+
+@media (max-width: 600px) {
+    #main-page-container {
+        gap: 16px;
+        padding: 140px 16px 48px;
+    }
+
+    #main-page-women {
+        font-size: clamp(48px, 18vw, 80px);
+        letter-spacing: 4px;
+        text-indent: 4px;
+    }
+}
+
+#main-page-bottom .button button:hover {
+    background-color: rgb(100, 33, 149);
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 0, 157, 0.493);
+    color: rgb(255, 0, 157);
+}
+
+
+@keyframes colorTween {
+    from {
+        color: rgb(100, 33, 149);
+    } to {
+        color: rgb(255, 0, 157);
+    }
+}
+

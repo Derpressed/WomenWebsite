@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WOMEN</title>
+        <link rel="stylesheet" href="mainCss/page.css">
         <link rel="stylesheet" href="mainCss/header.css">
         <link rel="stylesheet" href="mainCss/mainPage.css">
         <link rel="stylesheet" href="mainCss/aboutPage.css">
@@ -9,7 +11,6 @@
         <link rel="stylesheet" href="mainCss/eventsPage.css">
     </head>
     <body>
-        <div id="top"></div>
         
         <header>
             <div id="header">
@@ -23,8 +24,8 @@
                         </a>
                     </div>
                     <div id="upper-header-logo">
-                        <a href="#top" aria-label="Women Logo">
-                            WOMEN
+                        <a href="#main-page-container" aria-label="Women Logo">
+                            logo
                         </a>
                     </div>
                     <div id="upper-header-join-now">
@@ -32,6 +33,9 @@
                     </div>
                 </div>
                 <div id="lower-header">
+                    <a href="#main-page-container" id="home-button" aria-label="Home">
+                        Home
+                    </a>
                     <a href="#about-page-container" id="about-link" aria-label="About Women">
                         About
                     </a>
@@ -41,6 +45,9 @@
                     <a href="#events-page-container" id="events-link" aria-label="Women Events">
                         Events
                     </a>
+                    <div id="nav-section">
+
+                    </div>
                 </div>
             </div>
         </header>
@@ -48,14 +55,49 @@
         <main>
             <section id="main-page-container">
                 <div id="main-page-women">
-                    WOMEN
+                    <span>WOMEN</span>
                 </div>
                 <div id="main-page-meaning">
-                    WOMEN OF MANITOBA ENGINEERING NETWORK
-                    <span>Create Community. Empower Eachother. Grow Inclusivity. Learn Together</span>
+                    <div>
+                        WOMEN OF MANITOBA ENGINEERING NETWORK
+                    </div>
+                </div>
+                <div id="main-page-bottom">
+                    <div class="button">
+                        <button>
+                            Join
+                        </button>
+                    </div>
                 </div>
             </section>
             <section id="about-page-container">
+                <div class="main-container">
+                    <div id="about-container">
+                        <div class="text-logo">
+                            <span>W</span><span>O</span><span>M</span><span>E</span><span>N</span>
+                        </div>
+                        <div class="text">
+                            About us
+                        </div>
+                        <div class="description">
+                            <div>
+                                Create <span>Community</span>
+                            </div>
+                            <div>
+                                <span>Empower</span> Eachother
+                            </div>
+                            <div>
+                                Grow <span>Inclusivity</span>
+                            </div>
+                            <div>
+                                <span>Learn Together</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="about-body-text">
+                        
+                    </div>
+                </div>
 
             </section>
             <section id="aunt-flo-page-container">
@@ -67,8 +109,6 @@
 
 
         </main>
-
-
-
+    <script src="mainJs/navHeader.js"></script>
     </body>
 </html>
