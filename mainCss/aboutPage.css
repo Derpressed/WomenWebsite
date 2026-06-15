@@ -8,13 +8,13 @@
     align-items: center;
 
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
 
     z-index: 1;
 
     background-color: rgb(233, 214, 215);
 
-    overflow-x: hidden;
+
     padding: clamp(130px, 14vh, 170px) 24px clamp(40px, 7vh, 64px);
 }
 
@@ -26,16 +26,15 @@
     position: relative;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     justify-content: center;
     align-items: center;
-
-    gap: clamp(24px, 6vw, 100px);
 }
 
 #about-container {
     display: flex;
+    flex-direction: column;
 
     justify-content: center;
     align-items: center;
@@ -45,7 +44,7 @@
     width: min(100%, 1200px);
     min-height: clamp(110px, 16vh, 140px);
 
-    top: 0px;
+    top: clamp(-100px, -8vh, -100px);
 
     gap: clamp(16px, 4vw, 50px);
 }
@@ -58,7 +57,7 @@
 
     letter-spacing: clamp(8px, 3vw, 50px);
     text-indent: clamp(8px, 3vw, 50px);
-    opacity: 0.03;
+    opacity: 0.1;
 
     padding-top: clamp(20px, 5vh, 80px);
     white-space: nowrap;
@@ -102,15 +101,14 @@
 #about-container > .text {
     position: absolute;
 
-
     font-weight: 700;
     font-size: 15px;
 }
 
 #about-container > .description {
-    position: absolute;
+
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: clamp(10px, 4vw, 60px);
 
@@ -135,86 +133,36 @@
     }
 }
 
-#about-body-text {
-    width: min(100%, 1200px);
+#about-page-container .main-container .about-body-text {
 
+    position: relative;
+    top: clamp(-220px, -7vw, -280px);   
+
+    text-align: center;
+    font-weight: 500;
+    font-size: clamp(1px, 3vw, 20px);
+}
+
+#extended-about-visual-container {
     display: flex;
+    position: absolute;
 
     justify-content: center;
     align-items: center;
-    text-align: center;
+    flex-direction: row;
 
-    font-size: clamp(18px, 3vw, 30px);
+    top: 150px;
+
+    height: 98%;
+    width: 100%;
+
+    gap: 80px;
 }
 
-@media (max-width: 730px) {
-    #about-page-container {
-        justify-content: flex-start;
-        padding: calc(112px + clamp(12px, 4vh, 28px)) 16px 40px;
-    }
+#extended-about-visual-container > div {
+    height: 100%;
+    width: clamp(400px, 200vw, 500px);
 
-    #about-page-container .main-container {
-        min-height: auto;
-        padding-top: clamp(80px, 18vh, 120px);
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        text-align: center;
-    }
-
-    #about-container {
-        min-height: clamp(96px, 22vh, 132px);
-    }
-
-    #about-container .text-logo {
-        font-size: clamp(44px, 17vw, 72px);
-        letter-spacing: clamp(6px, 2.4vw, 12px);
-        text-indent: clamp(6px, 2.4vw, 12px);
-        padding-top: 0px;
-    }
-
-    #about-container > .description {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        padding-top: clamp(58px, 14vh, 82px);
-    }
+    background-color: black;
 }
 
-@media (max-width: 730px) {
-    #about-page-container .main-container {
-        padding-top: 0px;
-    }
-
-    #about-container {
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: auto;
-        gap: 14px;
-        text-align: center;
-    }
-
-    #about-container .text-logo {
-        top: 0px;
-        left: 50%;
-        width: max-content;
-        padding-top: 0px;
-        transform: translateX(-50%);
-    }
-
-    #about-container > .text {
-        position: relative;
-        order: 1;
-        z-index: 2;
-    }
-
-    #about-container > .description {
-        position: relative;
-        order: 2;
-        padding-top: 0px;
-        z-index: 2;
-    }
-}
